@@ -1,0 +1,23 @@
+{
+  "name": "phonebook2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "build:ui": "rm -rf dist && cd ../phonebook/vite-project && npm run build && cp -r dist ../phonebook2",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+  },
+  "author": "Jakob Schiller",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
